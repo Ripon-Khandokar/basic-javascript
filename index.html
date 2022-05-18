@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In Form</title>
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <style>
+        .form{
+            padding:50px;
+            box-shadow: 5px 5px 10px gray;
+        }
+    .login-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    }
+    #transition{
+            display: none;
+    }
+    .deposit,.balance,.withdraw{
+        padding: 30px;
+        border-radius: 10px;
+        margin: 0px 20px;
+    }
+    .deposit{
+        background-color: violet;
+    }
+    .withdraw{
+        background-color: brown;
+    }
+    .balance{
+        background-color: chartreuse;
+    }
+    .balance-submit{
+        text-transform: capitalize;
+        margin-top: 50px;
+    }
+    button{
+        text-transform: capitalize;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+                <div class="col-md-12">
+                    <div id="login-area" class="login-area">
+                        <form class="form" action="#">
+                            <h2 class="text-center mb-5">Welcome to my website</h2>
+                            <h5>Log In</h5>
+                            <input type="text" class="form-control" placeholder="Email">
+                            <br>
+                            <input type="password" class="form-control" placeholder="Password">
+                            <br>
+                            <button id="login" class="btn btn-success">Log In</button>
+                        </form>                    
+                    </div>
+                </div>
+        </div>
+    </div>
+    <div class="container">
+        <div id="transition">
+            <div class="row balance-area">
+                <div class="col-md-4">
+                   <div class="deposit">
+                    <h5>Deposit</h5>
+                    <h2>$ <span id="currentDeposit"> 00</span></h2>
+                   </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="withdraw">
+                    <h5>Withdraw</h5>
+                    <h2>$ <span id="current-withdraw"> 00 </span></h2>
+                </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="balance">
+                        <h5>Balance</h5>
+                        <h2>$ <span id="currentBalance">100</span> </h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row balance-submit">
+                <div class="col-md-6">
+                    <div class="form">
+                    <h2>deposit</h2>
+                    <input id="deposit-amount" type="number" class="form-control" placeholder="you want to Deposit"><br>
+                    <button id="deposit" class="btn btn-success">deposit</button>
+                    </div>    
+                </div>
+                <div class="col-md-6">
+                    <div class="form">
+                    <h2>Withdraw</h2>
+                    <input id="withdraw-amount" type="number" class="form-control" placeholder="you want to Withdraw"><br>
+                    <button id="withdraw" class="btn btn-success">Withdraw</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="css/js/bootstrap.min.js"></script>
+<script src="numbers.js"></script>
+</body>
+</html>
